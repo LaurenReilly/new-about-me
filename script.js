@@ -43,11 +43,9 @@ function prevent(e) {
     e.preventDefault();
     switch(e.target.title) {
         case "degree":
-            console.log("its working");
             progressBar();
                 break;
         case "collector":
-            console.log("working collector");
             progressBar();
                 break;
         case "aquarium":
@@ -80,9 +78,17 @@ function prevent(e) {
 }
 
 function progressBar() {
+    if (width >= 100) {
+        return;
+    } else {
     width += 10;
     progress.style.width = width + "%";
+    }
     
+}
+
+function reveal() {
+
 }
 
 
