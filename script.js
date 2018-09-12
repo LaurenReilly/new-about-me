@@ -29,42 +29,56 @@ var gamingList = document.querySelector(".gaming");
 //stop page refreshing, add 10% to progress bar, remove hidden class from list items
 function prevent(e) {
     e.preventDefault();
-    progressBar();
-    switch(e.target.title) {
-        case "degree":
-            degreeList.classList.remove("hidden");
-                break;
-        case "collector":
-            collectorList.classList.remove("hidden");
-                break;
-        case "aquarium":
-            aquariumList.classList.remove("hidden");
-                break;
-        case "fantasy":
-            fantasyList.classList.remove("hidden");
-                break;
-        case "cartoons":
-            cartoonsList.classList.remove("hidden");
-                break;
-        case "married":
-            marriedList.classList.remove("hidden");
-                break;
-        case "cats":
-            catsList.classList.remove("hidden");
-                break;
-        case "selftaught":
-            selfTaughtList.classList.remove("hidden");
-                break;
-        case "actor":
-            actorList.classList.remove("hidden");
-                break;
-        case "gaming":
-            gamingList.classList.remove("hidden");
-                break;  
+    if (e.target.classList.contains("clicked")) {
+        return;
+    } else {
+        progressBar();
+        switch(e.target.title) {
+            case "degree":
+                degree.classList.add("clicked");
+                degreeList.classList.remove("hidden");
+                    break;
+            case "collector":
+                collector.classList.add("clicked");
+                collectorList.classList.remove("hidden");
+                    break;
+            case "aquarium":
+                aquarium.classList.add("clicked");
+                aquariumList.classList.remove("hidden");
+                    break;
+            case "fantasy":
+                fantasy.classList.add("clicked");
+                fantasyList.classList.remove("hidden");
+                    break;
+            case "cartoons":
+                cartoons.classList.add("clicked");
+                cartoonsList.classList.remove("hidden");
+                    break;
+            case "married":
+                married.classList.add("clicked");
+                marriedList.classList.remove("hidden");
+                    break;
+            case "cats":
+                cats.classList.add("clicked");
+                catsList.classList.remove("hidden");
+                    break;
+            case "selftaught":
+                selfTaught.classList.add("clicked");
+                selfTaughtList.classList.remove("hidden");
+                    break;
+            case "actor":
+                actor.classList.add("clicked");
+                actorList.classList.remove("hidden");
+                    break;
+            case "gaming":
+                gaming.classList.add("clicked");
+                gamingList.classList.remove("hidden");
+                    break;  
+        }
     }
 }
 
-//add 10% width to progress bar when each area is clicked (bug: can be clicked multiple times atm)
+//add 10% width to progress bar when each area is clicked
 function progressBar() {
     if (width >= 100) {
         return;
