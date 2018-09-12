@@ -1,43 +1,20 @@
-// var button = document.querySelector("#hidey");
-// var list = document.querySelectorAll("li");
-
-// var items = [...list];
-
-
-// button.addEventListener("click", hide);
-
-// function hide(){
-//     items.forEach(function (li){
-//         li.classList.remove("hidden");
-//     });
-// }
-
 //Selecting each map area
 var degree = document.querySelector("area[title='degree']");
-
 var collector = document.querySelector("area[title='collector']");
-
 var aquarium = document.querySelector("area[title='aquarium']");
-
 var fantasy = document.querySelector("area[title='fantasy']");
-
 var cartoons = document.querySelector("area[title='cartoons']");
-
 var married = document.querySelector("area[title='married']");
-
 var cats = document.querySelector("area[title='cats']");
-
 var selfTaught = document.querySelector("area[title='selftaught']");
-
 var actor = document.querySelector("area[title='actor']");
-
 var gaming = document.querySelector("area[title='gaming']");
 
+//selecting progress bar and setting initial width
 var progress = document.querySelector(".progress");
 var width = 0;
 
 //getting references to each dt item
-
 var degreeList = document.querySelector(".degree");
 var collectorList = document.querySelector(".collector");
 var aquariumList = document.querySelector(".aquarium");
@@ -49,9 +26,7 @@ var selfTaughtList = document.querySelector(".selftaught");
 var actorList = document.querySelector(".actor");
 var gamingList = document.querySelector(".gaming");
 
-
-//stop page refreshing and add 10% to progress bar
-
+//stop page refreshing, add 10% to progress bar, remove hidden class from list items
 function prevent(e) {
     e.preventDefault();
     progressBar();
@@ -89,6 +64,7 @@ function prevent(e) {
     }
 }
 
+//add 10% width to progress bar when each area is clicked (bug: can be clicked multiple times atm)
 function progressBar() {
     if (width >= 100) {
         return;
@@ -98,10 +74,7 @@ function progressBar() {
     }  
 }
 
-
-
 //adding click event to each area
-
 degree.addEventListener("click", prevent);
 collector.addEventListener("click", prevent);
 aquarium.addEventListener("click", prevent);

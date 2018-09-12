@@ -1,6 +1,8 @@
 /*font-family: 'Raleway', sans-serif;
 font-family: 'Griffy', cursive;
-orange: #ff6600*/
+orange: #ff6600 green:#66cc00 */
+
+
 body {
     background-color: black;
 }
@@ -22,6 +24,14 @@ header {
     border-radius: 100%;
 }
 
+.face:hover {
+    width: 210px;
+    height: 210px;
+    box-sizing: border-box;
+    border-radius: 100%;
+    transition-duration: .5s;
+}
+
 h1 {
     font-size: 6em;
     color: white;
@@ -35,6 +45,13 @@ h1 {
     border-radius: 100%;
 }
 
+.logo:hover {
+    width: 210px;
+    height: 210px;
+    border-radius: 100%;
+    transition-duration: .5s;
+
+}
 
 .tagline {
     width: 60%;
@@ -51,6 +68,12 @@ h2 {
     text-align: center; 
 }
 
+
+/* hide items until they are revealed by clicking on image map */
+.hidden {
+    visibility: hidden;
+}
+
 dl {
   color: white;
   font-family: 'Raleway', sans-serif;
@@ -63,23 +86,14 @@ dl {
     display: block;
     box-sizing: border-box;
     width: 970px;
-    height: 509px;
+    height: 510px;
     background-color: black;
     border: 5px solid #66cc00;
     border-radius: 20px;
     margin: 0 auto;
-    /* flex-grow: 2; */
 }
 
-/* hide items until they are revealed by clicking on image map */
-
-.hidden {
-    visibility: hidden;
-}
-
-
-/* trying to make a progress bar */
-
+/* progress bar from JS fiddle */
 .space {
     height: 10px;
 }
