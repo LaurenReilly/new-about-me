@@ -58,50 +58,12 @@ dl {
   display: flex;
   flex-wrap: wrap;
 }
- 
-
-
-/* about section and imagemap */
-/* .about {
-    display: flex;
-    justify-content: space-around;
-}
-
-
-.left {
-    color: white;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    margin-right: 2px;
-    flex-wrap: wrap;
-}
-
-
-.right{
-    color: white;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    margin-left: 2px;
-    flex-wrap: wrap;
-}
-
-li {
-    margin-bottom: 75px;
-    font-size: 1.2em;
-    font-family: 'Raleway', sans-serif;
-}
-
-ul:last-child{
-    margin-bottom: 0px;
-} */
 
 .imagemap {
     display: block;
     box-sizing: border-box;
     width: 970px;
-    height: 510px;
+    height: 509px;
     background-color: black;
     border: 5px solid #66cc00;
     border-radius: 20px;
@@ -111,9 +73,9 @@ ul:last-child{
 
 /* hide items until they are revealed by clicking on image map */
 
-/* .hidden {
+.hidden {
     visibility: hidden;
-} */
+}
 
 
 /* trying to make a progress bar */

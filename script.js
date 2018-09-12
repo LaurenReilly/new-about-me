@@ -12,7 +12,7 @@
 //     });
 // }
 
-//Trying to figure out how to select each map item
+//Selecting each map area
 var degree = document.querySelector("area[title='degree']");
 
 var collector = document.querySelector("area[title='collector']");
@@ -36,44 +36,56 @@ var gaming = document.querySelector("area[title='gaming']");
 var progress = document.querySelector(".progress");
 var width = 0;
 
+//getting references to each dt item
 
-//adding click event to areas
+var degreeList = document.querySelector(".degree");
+var collectorList = document.querySelector(".collector");
+var aquariumList = document.querySelector(".aquarium");
+var fantasyList = document.querySelector(".fantasy");
+var cartoonsList = document.querySelector(".cartoons");
+var marriedList = document.querySelector(".married");
+var catsList = document.querySelector(".cats");
+var selfTaughtList = document.querySelector(".selftaught");
+var actorList = document.querySelector(".actor");
+var gamingList = document.querySelector(".gaming");
+
+
+//stop page refreshing and add 10% to progress bar
 
 function prevent(e) {
     e.preventDefault();
+    progressBar();
     switch(e.target.title) {
         case "degree":
-            progressBar();
+            degreeList.classList.remove("hidden");
                 break;
         case "collector":
-            progressBar();
+            collectorList.classList.remove("hidden");
                 break;
         case "aquarium":
-        progressBar();
-            break;
+            aquariumList.classList.remove("hidden");
+                break;
         case "fantasy":
-        progressBar();
-            break;
+            fantasyList.classList.remove("hidden");
+                break;
         case "cartoons":
-        progressBar();
-            break;
+            cartoonsList.classList.remove("hidden");
+                break;
         case "married":
-        progressBar();
-            break;
+            marriedList.classList.remove("hidden");
+                break;
         case "cats":
-        progressBar();
-            break;
+            catsList.classList.remove("hidden");
+                break;
         case "selftaught":
-        progressBar();
-            break;
+            selfTaughtList.classList.remove("hidden");
+                break;
         case "actor":
-        progressBar();
-            break;
+            actorList.classList.remove("hidden");
+                break;
         case "gaming":
-        progressBar();
-            break;
-        
-
+            gamingList.classList.remove("hidden");
+                break;  
     }
 }
 
@@ -83,15 +95,12 @@ function progressBar() {
     } else {
     width += 10;
     progress.style.width = width + "%";
-    }
-    
-}
-
-function reveal() {
-
+    }  
 }
 
 
+
+//adding click event to each area
 
 degree.addEventListener("click", prevent);
 collector.addEventListener("click", prevent);
@@ -103,14 +112,3 @@ cats.addEventListener("click", prevent);
 selfTaught.addEventListener("click", prevent);
 actor.addEventListener("click", prevent);
 gaming.addEventListener("click", prevent);
-
-
-
-
-
-// code for once   
-// button.addEventListener('click', () => {
-//     console.log('Click!!!');
-// }, {
-//   once: true
-// });
